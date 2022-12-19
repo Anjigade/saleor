@@ -11,12 +11,12 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t Anjigade/saleor-core:DEV .'
+                sh 'docker image build -t anjigade/saleor-core:DEV .'
             }
         }
         stage('push image to registry') {
             steps {
-                sh 'docker image push Anjigade/saleor-core:DEV'
+                sh 'docker image push anjigade/saleor-core:DEV'
             }
         }
     }
